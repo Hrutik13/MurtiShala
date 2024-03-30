@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "140062973464",
+    "project_id": "murtishala-3d5c3",
+    "storage_bucket": "murtishala-3d5c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140062973464:android:9d1bad03ed6e584f8bed6d",
+        "android_client_info": {
+          "package_name": "com.example.idol_booking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrNrCFfm0XoYysLln-oqDXBdCbPfc_9hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
