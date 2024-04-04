@@ -8,7 +8,7 @@ import 'package:idol_booking/orderRequests.dart';
 import 'package:video_player/video_player.dart';
 import 'package:idol_booking/admin_profile.dart';
 import 'package:idol_booking/admin_customer.dart';
-
+import 'payment_Info.dart';
 import 'admin_feedback.dart';
 import 'login.dart';
 
@@ -76,6 +76,31 @@ class _AdminHomeState extends State<Admin_Home> {
           }, icon: Icon(Icons.logout)),
         ],
         ),
+      drawer: Drawer(
+        width: 250,
+        child: ListView(
+          padding:EdgeInsets.all(8.0),
+          children: <Widget>[
+            DrawerHeader(
+              child: Text(''),
+            ),
+            ListTile(
+              title: Text('Payments'),
+              leading: Icon(Icons.payment),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PaymentInfo()));
+              },
+            ),
+            ListTile(
+              title: Text('Feedback'),
+              leading: Icon(Icons.feedback),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FeedbackScreen()));
+              }
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: <Widget>[
           SizedBox.expand(
@@ -154,35 +179,35 @@ class _AdminHomeState extends State<Admin_Home> {
                   icon: Icon(Icons.account_circle),
                   color:Colors.white,
                 ),
-                PopupMenuButton<String>(
-                  icon: Icon(Icons.more_vert,color: Colors.white,),
-                  iconSize: 30,
-                  offset: Offset(0,50),
-                  itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                    PopupMenuItem<String>(
-                      value: 'Feedback',
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              alignment: Alignment.topLeft,
-                              child: Text('Feedback', style: TextStyle(fontSize: 16)),
-                            ),
-                          ),
-                          Icon(Icons.feedback, size: 24),
-                        ],
-                      ),
-                    ),
-                  ],
-                  onSelected: (String value) {
-                    // Handle the selection of the Feedback option here
-                    if (value == 'Feedback') {
-                      // Handle Feedback option
-                      // For example, you can navigate to a feedback screen
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => FeedbackScreen()));
-                    }
-                  },
-                ),
+                // PopupMenuButton<String>(
+                //   icon: Icon(Icons.more_vert,color: Colors.white,),
+                //   iconSize: 30,
+                //   offset: Offset(0,50),
+                //   itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                //     PopupMenuItem<String>(
+                //       value: 'Feedback',
+                //       child: Row(
+                //         children: [
+                //           Expanded(
+                //             child: Container(
+                //               alignment: Alignment.topLeft,
+                //               child: Text('Feedback', style: TextStyle(fontSize: 16)),
+                //             ),
+                //           ),
+                //           Icon(Icons.feedback, size: 24),
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                //   onSelected: (String value) {
+                //     // Handle the selection of the Feedback option here
+                //     if (value == 'Feedback') {
+                //       // Handle Feedback option
+                //       // For example, you can navigate to a feedback screen
+                //       Navigator.push(context, MaterialPageRoute(builder: (context) => FeedbackScreen()));
+                //     }
+                //   },
+                // ),
               ],
             ),
           )

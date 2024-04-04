@@ -415,7 +415,7 @@ class HomePage extends StatelessWidget {
                             ),
                             SizedBox(height: 0.5),
                             Text(
-                              description,
+                              price,
                               style: TextStyle(
                                 fontSize: 14,
                               ),
