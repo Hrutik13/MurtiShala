@@ -425,6 +425,10 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'orderRequestDetails.dart';
 import 'customizeOrderRequest.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'admin_customer.dart';
+import 'admin_home.dart';
+import 'admin_profile.dart';
+import 'admin_upload.dart';
 
 class OrderRequests extends StatefulWidget {
   @override
@@ -497,23 +501,33 @@ class _OrderRequestsState extends State<OrderRequests> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Admin_Home()));
+              },
               icon: Icon(Icons.home),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Customers()));
+              },
               icon: Icon(Icons.people_alt),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderRequests()));
+              },
               icon: Icon(Icons.production_quantity_limits),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Admin_Product()));
+              },
               icon: Icon(Icons.add_a_photo),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Admin_Profile()));
+              },
               icon: Icon(Icons.account_circle),
             ),
           ],

@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:idol_booking/admin_profile.dart';
 import 'package:idol_booking/admin_home.dart';
 import 'package:idol_booking/admin_upload.dart';
+import 'orderRequests.dart';
 
 class Customers extends StatelessWidget {
   @override
@@ -64,7 +65,9 @@ class Customers extends StatelessWidget {
             IconButton(onPressed: (){},
               icon: Icon(Icons.people_alt),
             ),
-            IconButton(onPressed: (){},
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderRequests()));
+            },
               icon: Icon(Icons.production_quantity_limits),
             ),
             IconButton(onPressed: (){

@@ -195,6 +195,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'Homepage.dart';
 import 'login.dart';
+import 'userHome.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -245,7 +246,7 @@ class _RegisterState extends State<Register> {
       });
 
       // Navigate to home page or next screen
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => UserHome()));
     } on FirebaseAuthException catch (ex) {
       Fluttertoast.showToast(msg: ex.code.toString(), gravity: ToastGravity.CENTER);
     }
@@ -303,7 +304,7 @@ class _RegisterState extends State<Register> {
         Fluttertoast.showToast(msg: 'User signed up successfully', gravity: ToastGravity.CENTER);
       }
 
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => UserHome()));
     } catch (error) {
       print("Error signing in with Google: $error");
       Fluttertoast.showToast(msg: 'Error signing in with Google', gravity: ToastGravity.CENTER);

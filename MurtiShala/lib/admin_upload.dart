@@ -113,6 +113,7 @@ import 'admin_customer.dart';
 import 'admin_home.dart';
 import 'admin_profile.dart';
 import 'upload_product.dart';
+import 'admin_customer.dart';
 
 class Admin_Product extends StatefulWidget {
   Admin_Product({Key? key}) : super(key: key);
@@ -193,7 +194,9 @@ class _AdminProductState extends State<Admin_Product> {
               icon: Icon(Icons.people_alt),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Customers()));
+              },
               icon: Icon(Icons.production_quantity_limits),
             ),
             IconButton(

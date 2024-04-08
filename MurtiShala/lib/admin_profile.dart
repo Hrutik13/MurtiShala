@@ -182,6 +182,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:idol_booking/admin_upload.dart';
 import 'package:idol_booking/admin_customer.dart';
+import 'admin_customer.dart';
 
 class Admin_Profile extends StatelessWidget{
   Admin_Profile({super.key});
@@ -302,7 +303,9 @@ class Admin_Profile extends StatelessWidget{
                 },
                   icon: Icon(Icons.people_alt),
                 ),
-                IconButton(onPressed: (){},
+                IconButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Customers()));
+                },
                   icon: Icon(Icons.production_quantity_limits),
                 ),
                 IconButton(onPressed: (){
